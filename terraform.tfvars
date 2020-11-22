@@ -1,5 +1,5 @@
 # 1 Backend variables
-do_token                              = "478a6caadccff13b813488fc35ef16e1da38e7ce03ddca3c6dc7cb6464f29cd1"
+do_token                              = "<your-token>"
 
 # 2 Cluster variables
 cluster_name                          = "my-special-cluster"
