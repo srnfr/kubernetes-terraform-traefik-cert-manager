@@ -12,5 +12,6 @@ spec:
   dnsNames:
     - whoami.bluetrusty.eu
   issuerRef:
-    name: letsencrypt-prod
+    name: letsencrypt-staging
+    ##     name: letsencrypt-prod
     kind: ClusterIssuer
