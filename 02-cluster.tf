@@ -60,7 +60,7 @@ provider "kubernetes" {
 # Load and connect to Helm
 provider "helm" {
   kubernetes {
-    load_config_file = false
+    #load_config_file = false
     host             = digitalocean_kubernetes_cluster.do_cluster.endpoint
     token            = digitalocean_kubernetes_cluster.do_cluster.kube_config[0].token
     cluster_ca_certificate = base64decode(
