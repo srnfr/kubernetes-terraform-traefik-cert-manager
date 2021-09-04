@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`whoami.yourdomain.com`)
+    - match: Host(`whoami.bluetrusty.eu`)
       kind: Rule
       services:
         - name: whoami
