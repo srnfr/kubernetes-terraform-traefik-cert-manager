@@ -7,10 +7,10 @@ metadata:
   labels:
     "use-http01-solver": "true"
 spec:
-  commonName: whoami.yourdomain.com
+  commonName: whoami.bluetrusty.eu
   secretName: whoami-cert
   dnsNames:
-    - whoami.yourdomain.com
+    - whoami.bluetrusty.eu
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
