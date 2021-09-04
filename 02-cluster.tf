@@ -48,7 +48,7 @@ resource "digitalocean_kubernetes_cluster" "do_cluster" {
 
 # Load and connect to Kubernetes
 provider "kubernetes" {
-  version          = "~> 1.13.3"
+  ##version          = "~> 1.13.3"
   load_config_file = false
   host             = digitalocean_kubernetes_cluster.do_cluster.endpoint
   token            = digitalocean_kubernetes_cluster.do_cluster.kube_config[0].token
@@ -67,5 +67,5 @@ provider "helm" {
       digitalocean_kubernetes_cluster.do_cluster.kube_config[0].cluster_ca_certificate
     )
   }
-  version = "~> 1.3.2"
+  ##version = "~> 1.3.2"
 }
