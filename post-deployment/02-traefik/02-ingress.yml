@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`traefik.yourdomain.com`)
+    - match: Host(`traefik.bluetrusty.eu`)
       kind: Rule
       middlewares:
         - name: traefik-dashboard-basicauth
