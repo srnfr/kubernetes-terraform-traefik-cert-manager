@@ -28,7 +28,7 @@ resource "helm_release" "cert-manager" {
   name       = var.cert_manager_chart_name
   chart      = var.cert_manager_chart_name
   repository = var.cert_manager_chart_repo
-  version    = var.cert_manager_chart_version
+##  version    = var.cert_manager_chart_version
   namespace  = "cert-manager"
 
   set {
