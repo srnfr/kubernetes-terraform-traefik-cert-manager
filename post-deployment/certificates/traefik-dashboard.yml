@@ -7,10 +7,10 @@ metadata:
   labels:
     "use-http01-solver": "true"
 spec:
-  commonName: traefik.yourdomain.com
+  commonName: traefik.bluetrusty.eu
   secretName: traefik-dashboard-cert
   dnsNames:
-    - traefik.yourdomain.com
+    - traefik.bluetrusty.eu
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
