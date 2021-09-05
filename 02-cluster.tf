@@ -52,7 +52,7 @@ resource "digitalocean_kubernetes_cluster" "do_cluster" {
 
   node_pool {
  ##   name       = "${var.cluster_name}-pool"
-    name       = "${var.cluster_prefix}-${var.cluster_environment}-{$var.cluster_region}-pool"
+    name       = "${var.cluster_prefix}-${var.cluster_environment}-${var.cluster_region}-pool"
     size       = var.node_size
     min_nodes  = var.node_min_count
     max_nodes  = var.node_max_count
