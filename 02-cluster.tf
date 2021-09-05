@@ -1,8 +1,9 @@
 # Variable declaration
-variable "cluster_name" {
-  type        = string
-  description = "Cluster name that will be created."
-}
+## plus besoin car le nom est construit à base d'autres vars
+#variable "cluster_name" {
+#  type        = string
+#  description = "Cluster name that will be created."
+#}
 variable "cluster_region" {
   type        = string
   description = "Cluster region."
