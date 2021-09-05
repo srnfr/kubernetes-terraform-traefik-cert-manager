@@ -44,7 +44,7 @@ data "digitalocean_kubernetes_versions" "do_cluster_version" {
 resource "digitalocean_kubernetes_cluster" "do_cluster" {
 ##  name         = var.cluster_name
 ##  name = "{$terraform.workspace}" <= ne marche pas avec TFC , default utilise
-  name = "${var.cluster_prefix}-${var.cluster_environment}-{$var.cluster_region}" 
+  name = "${var.cluster_prefix}-${var.cluster_environment}-${var.cluster_region}" 
   region       = var.cluster_region
   auto_upgrade = true
   version      = data.digitalocean_kubernetes_versions.do_cluster_version.latest_version
