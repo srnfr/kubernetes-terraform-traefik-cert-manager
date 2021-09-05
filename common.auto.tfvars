@@ -4,6 +4,7 @@
 # 2 Cluster variables
 ##cluster_name                          = "my-special-cluster"
 ##cluster_region                        = "ams3"
+cluster_prefix                        = "k"
 cluster_tags                          = ["demo", "development"]
 node_size                             = "s-1vcpu-2gb"
 node_min_count                        = 2
