@@ -1,8 +1,8 @@
 # Variable declaration
-variable "cluster_name" {
-  type        = string
-  description = "Cluster name that will be created."
-}
+##variable "cluster_name" {
+##  type        = string
+##  description = "Cluster name that will be created."
+##}
 variable "cluster_region" {
   type        = string
   description = "Cluster region."
@@ -31,7 +31,8 @@ data "digitalocean_kubernetes_versions" "do_cluster_version" {
 
 # Create the cluster with autoscaling on
 resource "digitalocean_kubernetes_cluster" "do_cluster" {
-  name         = var.cluster_name
+##  name         = var.cluster_name
+  name = "{$terraform.workspace}"
   region       = var.cluster_region
   auto_upgrade = true
   version      = data.digitalocean_kubernetes_versions.do_cluster_version.latest_version
