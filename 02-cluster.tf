@@ -11,6 +11,16 @@ variable "cluster_tags" {
   type        = list(string)
   description = "Cluster tags."
 }
+##
+variable "cluster_prefix" {
+  type        = string
+  description = "Cluster tags."
+}
+variable "cluster_environment" {
+  type        = string
+  description = "Cluster tags."
+}
+##
 variable "node_size" {
   type        = string
   description = "The size of the nodes in the cluster."
@@ -32,7 +42,8 @@ data "digitalocean_kubernetes_versions" "do_cluster_version" {
 # Create the cluster with autoscaling on
 resource "digitalocean_kubernetes_cluster" "do_cluster" {
   name         = var.cluster_name
-##  name = "{$terraform.workspace}" <= ne marche pas avce TFC , default utilise
+##  name = "{$terraform.workspace}" <= ne marche pas avec TFC , default utilise
+  name = "${cluster_prefix}-${cluster_environment}-{$cluster_region}" 
   region       = var.cluster_region
   auto_upgrade = true
   version      = data.digitalocean_kubernetes_versions.do_cluster_version.latest_version
