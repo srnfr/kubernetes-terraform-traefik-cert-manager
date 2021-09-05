@@ -41,7 +41,7 @@ data "digitalocean_kubernetes_versions" "do_cluster_version" {
 
 # Create the cluster with autoscaling on
 resource "digitalocean_kubernetes_cluster" "do_cluster" {
-  name         = var.cluster_name
+##  name         = var.cluster_name
 ##  name = "{$terraform.workspace}" <= ne marche pas avec TFC , default utilise
   name = "${cluster_prefix}-${cluster_environment}-{$cluster_region}" 
   region       = var.cluster_region
